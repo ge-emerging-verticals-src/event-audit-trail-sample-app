@@ -1,0 +1,16 @@
+---
+applications:
+- name: event-audit-trail-demo
+  memory: 512M
+  instances: 1
+  timeout: 180
+  host: event-audit-trail-demo
+  path: ./target/event-audit-trail-sample-1.0.0-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+    - peat-demo-2
+  env:
+     event_audit_trail_client_id: "poc"
+     event_audit_trail_client_secret: "poc123"
+     event_audit_trail_client_token_service_url: "https://126f9914-18e0-4b31-804e-e43c0958a850.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token"
+     event_audit_trail_vcap_name: "predix-event-audit-trail"

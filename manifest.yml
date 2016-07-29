@@ -1,0 +1,16 @@
+---
+applications:
+- name: event-audit-trail-sample
+  memory: 512M
+  instances: 1
+  timeout: 180
+  host: event-audit-trail-sample
+  path: ./target/event-audit-trail-sample-1.0.0-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+    - <event-audit-trail-service-instance-name>
+  env:
+     event_audit_trail_client_id: "<uaa-client-id>"
+     event_audit_trail_client_secret: "<uaa-client-secret>"
+     event_audit_trail_client_token_service_url: "<predix-uaa-instance-url>/oauth/token"
+     event_audit_trail_vcap_name: "event-audit-trail"

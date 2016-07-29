@@ -1,0 +1,110 @@
+{
+	"id": "13073d97-79bf-bcf0-99a9-e655f03b9401",
+	"name": "Event Audit Trail Sample ",
+	"description": "",
+	"order": [
+		"26b517ca-8a5e-3cb2-5df0-d77a18ba0328",
+		"efb4bd86-9825-9c3a-c30c-faf0668ac6e6",
+		"68dc42cb-4ee4-6d08-8b7a-a7e6f9f1b930",
+		"60acee9f-c6f8-344c-9c27-3e5a3f62de92"
+	],
+	"folders": [],
+	"timestamp": 1459893387155,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "26b517ca-8a5e-3cb2-5df0-d77a18ba0328",
+			"headers": "",
+			"url": "http://localhost:9901/hello",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459893535971,
+			"name": "Sample - GET hello",
+			"description": "",
+			"collectionId": "13073d97-79bf-bcf0-99a9-e655f03b9401",
+			"responses": [],
+			"rawModeData": "[\n    {\n      \"owner\": \"dcd7d5ab-3cff-46f3-abde-a6e279c01bf6\",\n      \"grouping\": \"data-ingest\\n\",\n      \"classification\": 0,\n      \"data\": \"{\\\"file\\\": \\\"test4.csv\\\"}\"\n    },\n    {\n      \"owner\": \"dcd7d5ab-3cff-46f3-abde-a6e279c01bf6\",\n      \"grouping\": \"data-ingest\\n\",\n      \"classification\": 0,\n      \"data\": \"{\\\"file\\\": \\\"test5.csv\\\"}\"\n    },\n    {\n      \"owner\": \"dcd7d5ab-3cff-46f3-abde-a6e279c01bf6\",\n      \"grouping\": \"data-ingest\",\n      \"classification\": 0,\n      \"data\": \"{\\\"file\\\": \\\"test6.csv\\\"}\"\n    }\n  ]"
+		},
+		{
+			"id": "60acee9f-c6f8-344c-9c27-3e5a3f62de92",
+			"headers": "Authorization: bearer {{token}}\n",
+			"url": "https://event-logger.run.aws-usw02-pr.ice.predix.io/v1/events?owner_uuid=ea47d5ab-3cff-46f3-abde-a6e279c01fa6",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "file",
+					"value": null,
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "routing-key",
+					"value": "aoi-ingest-worker2",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459893518794,
+			"name": "Get Event by Uuid",
+			"description": "",
+			"collectionId": "13073d97-79bf-bcf0-99a9-e655f03b9401",
+			"responses": []
+		},
+		{
+			"id": "68dc42cb-4ee4-6d08-8b7a-a7e6f9f1b930",
+			"headers": "Authorization: bearer {{token}}\n",
+			"url": "https://event-logger.run.aws-usw02-pr.ice.predix.io/v1/events?owner_uuid=947ee62d-7c06-4579-9bba-cbf81b26b2ca",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459893501513,
+			"name": "Get Events by Owner uuid",
+			"description": "",
+			"collectionId": "13073d97-79bf-bcf0-99a9-e655f03b9401",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "efb4bd86-9825-9c3a-c30c-faf0668ac6e6",
+			"headers": "",
+			"url": "http://localhost:9901/foo",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459893528568,
+			"name": "Sample - GET foo",
+			"description": "",
+			"collectionId": "13073d97-79bf-bcf0-99a9-e655f03b9401",
+			"responses": [],
+			"rawModeData": "[\n    {\n      \"owner\": \"dcd7d5ab-3cff-46f3-abde-a6e279c01bf6\",\n      \"grouping\": \"data-ingest\\n\",\n      \"classification\": 0,\n      \"data\": \"{\\\"file\\\": \\\"test4.csv\\\"}\"\n    },\n    {\n      \"owner\": \"dcd7d5ab-3cff-46f3-abde-a6e279c01bf6\",\n      \"grouping\": \"data-ingest\\n\",\n      \"classification\": 0,\n      \"data\": \"{\\\"file\\\": \\\"test5.csv\\\"}\"\n    },\n    {\n      \"owner\": \"dcd7d5ab-3cff-46f3-abde-a6e279c01bf6\",\n      \"grouping\": \"data-ingest\",\n      \"classification\": 0,\n      \"data\": \"{\\\"file\\\": \\\"test6.csv\\\"}\"\n    }\n  ]"
+		}
+	]
+}
